@@ -28,11 +28,12 @@ def get_last_chat_id_and_text(updates):
     last_update = num_updates - 1
     text = updates["result"][last_update]["message"]["text"]
     chat_id = updates["result"][last_update]["message"]["chat"]["id"]
-    return (text, chat_id)
+    chat_name = updates["result"][last_update]["message"]["from"]["first_name"]
+    return (text, chat_id, chat_name)
 
 
-def send_message(text, chat_id):
-    url = URL + "sendMessage?text={}&chat_id={}".format(text, chat_id)
+def send_message(text, chat_id, chat_name):
+    url = URL + "sendMessage?text={}&chat_id={}".format("Ciao " + chat_name + " " + text, chat_id)
     get_url(url)
 
 
@@ -42,9 +43,9 @@ def send_message(text, chat_id):
 def main():
     last_textchat = (None, None)
     while True:
-        text, chat = get_last_chat_id_and_text(get_updates())
+        text, chat, chat_name = get_last_chat_id_and_text(get_updates())
         if (text, chat) != last_textchat:
-            send_message(text, chat)
+            send_message(text, chat, chat_name)
             last_textchat = (text, chat)
         time.sleep(0.5)
 
