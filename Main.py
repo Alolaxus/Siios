@@ -1,32 +1,53 @@
 import requests
-import datetime
+import json
+import time
 
-url = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
+URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 
 
-def __init__(self, token):
-    self.token = token
-    self.api_url = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
+def get_url(url):
+    response = requests.get(url)
+    content = response.content.decode("utf8")
+    return content
 
-    def get_updates(self, offset=None, timeout=30):
-        method = 'getUpdates'
-        params = {'timeout': timeout, 'offset': offset}
-        resp = requests.get(self.api_url + method, params)
-        result_json = resp.json()['result']
-        return result_json
 
-    def send_message(self, chat_id, text):
-        params = {'chat_id': chat_id, 'text': text}
-        method = 'sendMessage'
-        resp = requests.post(self.api_url + method, params)
-        return resp
+def get_json_from_url(url):
+    content = get_url(url)
+    js = json.loads(content)
+    return js
 
-    def get_last_update(self):
-        get_result = self.get_updates()
 
-        if len(get_result) > 0:
-            last_update = get_result[-1]
-        else:
-            last_update = get_result[len(get_result)]
+def get_updates():
+    url = URL + "getUpdates"
+    js = get_json_from_url(url)
+    return js
 
-        return last_update
+
+def get_last_chat_id_and_text(updates):
+    num_updates = len(updates["result"])
+    last_update = num_updates - 1
+    text = updates["result"][last_update]["message"]["text"]
+    chat_id = updates["result"][last_update]["message"]["chat"]["id"]
+    return (text, chat_id)
+
+
+def send_message(text, chat_id):
+    url = URL + "sendMessage?text={}&chat_id={}".format(text, chat_id)
+    get_url(url)
+
+
+'''text, chat = get_last_chat_id_and_text(get_updates())
+ send_message(text, chat)
+ '''
+def main():
+    last_textchat = (None, None)
+    while True:
+        text, chat = get_last_chat_id_and_text(get_updates())
+        if (text, chat) != last_textchat:
+            send_message(text, chat)
+            last_textchat = (text, chat)
+        time.sleep(0.5)
+
+
+if __name__ == '__main__':
+    main()
