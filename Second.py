@@ -7,10 +7,78 @@ from telegram.ext import Updater, InlineQueryHandler, CommandHandler
 import logging
 import re
 from uuid import uuid4
+import logging
 
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
+bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
+
+logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    level=logging.INFO)
+
+logger = logging.getLogger(__name__)
 
 
+def start(bot, update):
+    update.message.reply_text('Hi!')
+
+
+def help(bot, update):
+    update.message.reply_text('Help!')
+
+
+def consiglio(bot, update):
+    listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
+                    "Non so aiutarti! Qui diventa cazzo!",
+                    "Paga le tue multe!"]
+    update.message.reply_text(random.choice(listConsigli))
+
+
+def error(bot, update, error):
+    logger.warn('Update "%s" caused error "%s"' % (update, error))
+
+
+def main():
+    updater = Updater('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
+    dp = updater.dispatcher
+    dp.add_handler(CommandHandler("start", start))
+    dp.add_handler(CommandHandler("consiglio", consiglio))
+    dp.add_error_handler(error)
+    updater.start_polling()
+    updater.idle()
+
+if __name__ == '__main__':
+    main()
+
+
+'''
+def start(bot, update):
+    bot.send_message(chat_id=update.message.chat_id, text="I'm a bot, please talk to me!")
+
+
+def consiglio(bot, update):
+    listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
+                    "Non so aiutarti! Qui diventa cazzo!",
+                    "Paga le tue multe!"]
+    update.message.reply_text("Ciao!")
+
+
+def main():
+    updater = Updater("322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0")
+    bot = telegram.Bot(token='322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
+
+    dp = updater.dispatcher
+
+    dp.add_handler(CommandHandler("consiglio", consiglio))
+    dp.add_handler(CommandHandler("start", start))
+    updater.start_polling()
+
+    updater.idle()
+
+    if __name__ == '__main__':
+        main()
+'''
+
+'''
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
@@ -46,7 +114,7 @@ def send_message(text, chat_id):
 
 text, chat = get_last_chat_id_and_text(get_updates())
 
-'''def main():
+def main():
     last_textchat = (None, None)
     listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
                     "Non so aiutarti! Qui diventa cazzo!",
@@ -73,31 +141,3 @@ text, chat = get_last_chat_id_and_text(get_updates())
 if __name__ == '__main__':
         main()
         '''
-
-
-def start(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text="I'm a bot, please talk to me!")
-
-
-def consiglio(bot, update):
-    listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
-                    "Non so aiutarti! Qui diventa cazzo!",
-                    "Paga le tue multe!"]
-    update.message.reply_text("Ciao!")
-
-
-def main():
-    updater = Updater("322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0")
-    bot = telegram.Bot(token='322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
-    print(bot.get_me())
-
-    dp = updater.dispatcher
-
-    dp.add_handler(CommandHandler("consiglio", consiglio))
-    dp.add_handler(CommandHandler("start", start))
-    updater.start_polling()
-
-    updater.idle()
-
-    if __name__ == '__main__':
-        main()
