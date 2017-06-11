@@ -38,7 +38,7 @@ def consiglio(bot, update):
                     "Il tg di Mentana è l'unico che ti dice la verità!", "Solo nella chimica troverai la vera risposta!"
                     "Non vale la pena comprare dall'estero se non c\'e\' cambio favorevole!",
                     "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
-                    "Non stare a meno di 20 cm di distanza dalle altre persone!",
+                    "Non stare a meno di 20 cm di distanza dalle altre persone!", "Trovati sempre qualcosa da fare, come Veltroni!",
                     "Da quanto non vai a fare una scarpinata a Monte Pellegrino???",
                     "Copiare da uno solo è reato. Copiare da tanti è ricerca!", "Soltanto un Sith vive di assoluti!",
                     "Non c\'è provare...C\'è fare o non fare!", "Un vulcaniano non sarebbe mai così indeciso!",
