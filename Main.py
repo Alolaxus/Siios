@@ -61,7 +61,6 @@ def cambio(bot, update):
 
 
 def cifra(bot, update):
-
     user = update.message.from_user
     replyother_keyboard = [['Penso di si', 'Penso di no']]
     update.message.reply_text("Hmm, capisco! Ma dimmi, ci sono in ballo più di 10 euro?",
@@ -73,7 +72,7 @@ def cifra(bot, update):
 def fine(bot, update):
     user = update.message.from_user
     update.message.reply_text("Amico mio, credimi, non ne vale la pena! Tieni i soldi in tasca!"
-                              "\n\n FINE DELL\'OPERAZIONE!",reply_markup=ReplyKeyboardRemove())
+                              "\n\n FINE DELL\'OPERAZIONE!", reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 
@@ -89,6 +88,12 @@ def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 
+def sendIsland(bot, update):
+    chat_id = bot.get_updates()[-1].message.chat_id
+    bot.send_photo(chat_id=chat_id,
+                   photo="http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg")
+
+
 def main():
     updater = Updater('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
     dp = updater.dispatcher
@@ -102,12 +107,13 @@ def main():
         states={
             RISPOSTA: [RegexHandler('^(Abbastanza|Poco|Fondamentale)$', cifra)],
 
-            CIFRA: [RegexHandler('^(Penso di si|Penso di no)$',fine),MessageHandler(Filters.text, fine)]
+            CIFRA: [RegexHandler('^(Penso di si|Penso di no)$', fine), MessageHandler(Filters.text, fine)]
         },
 
         fallbacks=[CommandHandler("cancel", cancel)]
     )
     dp.add_handler(conv_handler)
+    dp.add_handler((CommandHandler("isola", sendIsland)))
     dp.add_error_handler(error)
 
     updater.start_polling()
