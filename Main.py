@@ -72,7 +72,8 @@ def cifra(bot, update):
 
 def fine(bot, update):
     user = update.message.from_user
-    update.message.reply_text("Amico mio, credimi, non ne vale la pena! Tieni i soldi in tasca!",reply_markup=ReplyKeyboardRemove())
+    update.message.reply_text("Amico mio, credimi, non ne vale la pena! Tieni i soldi in tasca!"
+                              "\n\n FINE DELL\'OPERAZIONE!",reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 
