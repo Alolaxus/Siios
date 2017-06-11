@@ -110,7 +110,7 @@ def quokka(bot, update):
                    "http://lepassionicondivise.altervista.org/wp-content/uploads/2016/10/uaa7Nzn.jpg",
                    "https://s-media-cache-ak0.pinimg.com/736x/bb/7f/2f/bb7f2f4e470b07676817896aece18851.jpg",
                    ]
-    listquotes = ["Ho appena defecato!", "Compro e vendo oro!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
+    listquotes = ["Ho appena defecato!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
                   "Apri la borsa, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
                   "Facciamo pesce e pesce!", "Non sono mai sazio!", "Sono il marsupiale più felice del mondo secondo i tuoi criteri!",
                   "Non posseggo alcuna ablilità per difendermi dai predatori!", "Ormai dipendo unicamente da te!",
