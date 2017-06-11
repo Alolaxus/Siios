@@ -93,7 +93,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
     '''dp.add_handler(MessageHandler(Filters.text, unknownMessage))'''
-    dp.add_error_handler(error)
+
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
@@ -106,8 +106,10 @@ def main():
         fallbacks=[CommandHandler("cancel", cancel)]
     )
     dp.add_handler(conv_handler)
+    dp.add_error_handler(error)
 
     updater.start_polling()
+    
     updater.idle()
 
 
