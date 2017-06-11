@@ -3,7 +3,7 @@ import json
 import time
 import random
 import telegram
-from telegram.ext import Updater, InlineQueryHandler, CommandHandler
+from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler
 import logging
 import re
 from uuid import uuid4
@@ -21,11 +21,14 @@ logger = logging.getLogger(__name__)
 def start(bot, update):
     update.message.reply_text('Hi!')
 
+def unknownMessage(bot, update):
+    update.message.reply_text('Non so come aiutarti! Qui diventa cazzo!')
+
 
 def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Prendi un dottorato!",
                     "Non so aiutarti! Qui diventa cazzo!",
-                    "Paga le tue multe!"]
+                    "Paga le tue multe!", "Fai una maratona di Gazebo!", "Sfogati con un cameriere!"]
     update.message.reply_text(random.choice(listConsigli))
 
 
@@ -38,6 +41,7 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
+    dp.add_handler(MessageHandler("suca", unknownMessage()))
     dp.add_error_handler(error)
     updater.start_polling()
     updater.idle()
