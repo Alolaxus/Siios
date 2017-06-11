@@ -101,7 +101,7 @@ def main():
         states={
             RISPOSTA: [RegexHandler('^(Abbastanza|Poco|Fondamentale)$', cifra)],
 
-            CIFRA: [MessageHandler(Filters.text, fine)]
+            CIFRA: [RegexHandler('^(Penso di si|Penso di no)$',fine),MessageHandler(Filters.text, fine)]
         },
 
         fallbacks=[CommandHandler("cancel", cancel)]
