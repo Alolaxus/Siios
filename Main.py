@@ -23,7 +23,7 @@ def start(bot, update):
 
 
 def unknownMessage(bot, update):
-    bot.send_message(chat_id=update.message.chat_id, text=update.message.text)
+    bot.send_message(chat_id=update.message.chat_id, text='Non so come aiutarti! Qui diventa cazzo!')
 
 
 ''' update.message.reply_text('Non so come aiutarti! Qui diventa cazzo!') '''
