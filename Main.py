@@ -36,7 +36,7 @@ def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Parla solo con chi ha almeno un dottorato!",
                     "Mai andare a bobbonella dopo le 23!", "Impara un album di De Gregori e sarai al centro di ogni festa!",
                     "Il tg di Mentana è l'unico che ti dirà la verità!", "Non è spocchia ma amore per la conoscenza!"
-                    "Solo nella chimica troverai la vera risposta!", "Genova non è una città ma uno stile di vita!"
+                    "Solo nella chimica troverai la vera risposta!", "Genova non è una città ma uno stile di vita!",
                     "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
                     "Non stare a meno di 20 cm di distanza dalle altre persone!", "La tua parola deve sempre prevalere in una discussione!",
                     "Trovati sempre qualcosa di diverso da fare, come Veltroni!",
