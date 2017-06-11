@@ -23,6 +23,7 @@ def start(bot, update):
 
 
 
+
 def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
                     "Non so aiutarti! Qui diventa cazzo!",
