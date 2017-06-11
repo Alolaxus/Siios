@@ -89,8 +89,8 @@ def error(bot, update, error):
 
 
 def sendisland(bot, update):
-   
-    bot.send_photo(photo="http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg")
+
+    update.message.reply_text(photo="http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg")
 
 
 def main():
