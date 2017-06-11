@@ -34,21 +34,20 @@ def unknownMessage(bot, update):
 
 def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Parla solo con chi ha almeno un dottorato!",
-                    "Mai andare a bobbonella dopo le 23!", "Interpreta un brano di De Gregori!",
-                    "Il tg di Mentana è l'unico che ti dice la verità!",
-                    "Solo nella chimica troverai la vera risposta!",
-                    "Non vale la pena comprare dall'estero se non c\'e\' cambio favorevole!",
+                    "Mai andare a bobbonella dopo le 23!", "Impara un album di De Gregori e sarai al centro di ogni festa!",
+                    "Il tg di Mentana è l'unico che ti dirà la verità!", "Non è spocchia ma amore per la conoscenza!"
+                    "Solo nella chimica troverai la vera risposta!", "Genova non è una città ma uno stile di vita!"
                     "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
-                    "Non stare a meno di 20 cm di distanza dalle altre persone!",
-                    "Trovati sempre qualcosa da fare, come Veltroni!",
+                    "Non stare a meno di 20 cm di distanza dalle altre persone!", "La tua parola deve sempre prevalere in una discussione!",
+                    "Trovati sempre qualcosa di diverso da fare, come Veltroni!",
                     "Da quanto non vai a fare una scarpinata a Monte Pellegrino???",
                     "Copiare da uno solo è reato. Copiare da tanti è ricerca!", "Soltanto un Sith vive di assoluti!",
                     "Non c\'è provare...C\'è fare o non fare!", "Un vulcaniano non sarebbe mai così indeciso!",
                     "Vivi la vita un quarto di euro alla volta!", "Basta mangiare! Sei malato!",
                     "Scriviti tutti i tuoi conti in un archivio cartaceo!",
                     "Lotta sempre contro le multinazionali, tranne Apple!",
-                    "Piega sempre le tue camicie!", "Non si può pagare con carta? No grazie!",
-                    "Vuoi stupirla? Falle vedere che usi Ubuntu!", "Non sarà mai peggio del finale di Lost!",
+                    "Piega perfettamente le camicie e mettile sempre nel cellophane!", "Non si può pagare con carta? No grazie!",
+                    "Vuoi stupirla? Falle vedere che usi Ubuntu!", "Non ti finirà mai peggio del finale di Lost!",
                     "Non sentirti in colpa! Sono affari!",
                     "Non prendere mai decisioni prima di aver sorseggiato un Earl Grey!"
                     "Fai una maratona di puntate di Gazebo!", "Sfogati con un cameriere!"]
@@ -58,8 +57,7 @@ def consiglio(bot, update):
 def cambio(bot, update):
     reply_keyboard = [['Abbastanza', 'Poco', 'Fondamentale']]
     update.message.reply_text(
-        "Per tua fortuna ci sono io ad aiutarti! Aggiorno costantemente ogni valuta esistente ogni "
-        "0.007 secondi! "
+        "Per tua fortuna ci sono io ad aiutarti! Aggiorno costantemente tutte le valute esistenti ogni 3,14 secondi! "
         "\n Scrivi /cancel per interrompere il processo e cadere in povertà! "
         "\n Adesso, dimmi quanto è utile questo cambio per te:",
         reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
@@ -70,7 +68,7 @@ def cambio(bot, update):
 def cifra(bot, update):
     user = update.message.from_user
     replyother_keyboard = [['Penso di si', 'Penso di no']]
-    update.message.reply_text("Hmm, capisco! Ma dimmi, ci sono in ballo più di 10 euro?",
+    update.message.reply_text("Hmm, capisco! capisco! Ma dimmi, ci sono in ballo più di 10 euro?",
                               reply_markup=ReplyKeyboardMarkup(replyother_keyboard, one_time_keyboard=True))
 
     return CIFRA
@@ -78,7 +76,7 @@ def cifra(bot, update):
 
 def fine(bot, update):
     user = update.message.from_user
-    update.message.reply_text("Amico mio, credimi, non ne vale la pena! Tieni i soldi in tasca!"
+    update.message.reply_text("Non ne vale la pena! Tieni i soldi in tasca! Non pensarci mai più!"
                               "\n\n FINE DELL\'OPERAZIONE!", reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
@@ -117,7 +115,7 @@ def quokka(bot, update):
         "https://s-media-cache-ak0.pinimg.com/736x/bb/7f/2f/bb7f2f4e470b07676817896aece18851.jpg",
     ]
     listquotes = ["Ho appena defecato!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
-                  "Apri la borsa, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
+                  "Apri la borsa e nutrimi, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
                   "Facciamo pesce e pesce!", "Non sono mai sazio!",
                   "Sono il marsupiale più felice del mondo secondo i tuoi criteri!",
                   "Non posseggo alcuna ablilità per difendermi dai predatori!", "Ormai dipendo unicamente da te!",
@@ -129,6 +127,7 @@ def quokka(bot, update):
 
 
 def gatti(bot, update):
+
     listgatti = [
         "I gatti dormono da 16 a 18 ore al giorno. Ma il loro sonno è decisamente più leggero di quello degli esseri umani, per questo restano sempre vigili e pronti a reagire ad ogni stimolo.",
         "I gatti non possono percepire il sapore dolce. Provare a dividere il vostro cioccolato con loro sarebbe un gesto d’amore ben poco apprezzato.",
