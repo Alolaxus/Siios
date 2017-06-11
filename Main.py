@@ -25,9 +25,7 @@ def start(bot, update):
 
 
 def consiglio(bot, update):
-    listConsigli = ["Apri un Blog!", "Non e' difficile, e' inutile!", "Prendi un dottorato!",
-                    "Non so aiutarti! Qui diventa cazzo!",
-                    "Paga le tue multe!"]
+
     update.message.reply_text(random.choice(listConsigli))
 
 
@@ -48,4 +46,6 @@ if __name__ == '__main__':
     main()
 
 
-
+listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Prendi un dottorato!",
+                    "Non so aiutarti! Qui diventa cazzo!",
+                    "Paga le tue multe!"]
