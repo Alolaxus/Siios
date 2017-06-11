@@ -43,7 +43,8 @@ def consiglio(bot, update):
                     "Copiare da uno solo è reato. Copiare da tanti è ricerca!", "Soltanto un Sith vive di assoluti!",
                     "Non c\'è provare...C\'è fare o non fare!", "Un vulcaniano non sarebbe mai così indeciso!",
                     "Vivi la vita un quarto di euro alla volta!",
-                    "Scriviti tutti i tuoi conti!",
+                    "Scriviti tutti i tuoi conti!", "Lotta sempre contro le multinazionali, tranne Apple!",
+                    "Piega sempre le tue camicie!", ""
                     "Fai una maratona di Gazebo!", "Sfogati con un cameriere!"]
     update.message.reply_text(random.choice(listConsigli))
 
@@ -92,9 +93,12 @@ def sendisland(bot, update):
     listIslands = ["http://www.guoguiyan.com/data/out/105/68947604-island-wallpapers.jpg",
                    "http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg",
                    "http://www.fregate.com/assets/stageImages/fregate-island-beaches1.jpg",
+                   "http://andyflavoured.co.uk/wp-content/uploads/2012/01/Desert-Island.jpg",
+                   "http://blog.idrsolutions.com/wp-content/uploads/2010/11/NATURE-FakaravaCoconutTree_1024x768.jpg",
+                   "https://www.oen.org/wp-content/uploads/2015/05/Desert-Island_opt-1.jpg"
                    ]
     chat_id = update.message.chat_id
-    bot.send_photo(chat_id=chat_id, photo=random.choice(listIslands))
+    bot.send_photo(chat_id=chat_id, photo="https://www.oen.org/wp-content/uploads/2015/05/Desert-Island_opt-1.jpg")
 
 def quokka(bot, update):
     listquokkas = ["http://www.lastampa.it/rf/image_lowres/Pub/p4/2017/02/28/LaZampa/Foto/RitagliWeb/quokka01-10263-U11001522025659KVH-U11001522025659egE-1400x788%40LaStampa.it.JPG",
@@ -102,7 +106,11 @@ def quokka(bot, update):
                    "https://s-media-cache-ak0.pinimg.com/originals/92/32/5c/92325cda58adb047c3215ef092874fb7.jpg",
                    "https://s-media-cache-ak0.pinimg.com/originals/4d/43/8f/4d438f5ae4f70e4d1a5401f1bd4d2aac.jpg",
                    "http://lepassionicondivise.altervista.org/wp-content/uploads/2016/10/uaa7Nzn.jpg"]
-    listquotes = ["Ho appena defecato!", "Compro e vendo oro!", "Nutrimi!","Apri la borsa, presto!"]
+    listquotes = ["Ho appena defecato!", "Compro e vendo oro!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
+                  "Apri la borsa, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
+                  "Facciamo pesce e pesce!", "Non sono mai sazio!", "Sono il marsupiale più felice del mondo secondo i tuoi criteri!",
+                  "Non posseggo alcuna ablilità per difendermi dai predatori!", "Ormai dipendo unicamente da te!",
+                  "Sei il primo che si fa un selfie con me!"]
 
     chat_id = update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listquotes))
