@@ -34,18 +34,20 @@ def unknownMessage(bot, update):
 
 def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Parla solo con chi ha almeno un dottorato!",
-                    "Non andare a bobbonellare dopo le 23! MAI!", "Suona un brano di De Gregori!",
-                    "Guarda solo il tg di Mentana!",
+                    "Mai andare a bobbonella dopo le 23!", "Interpreta un brano di De Gregori!",
+                    "Il tg di Mentana è l'unico che ti dice la verità!", "Solo nella chimica troverai la vera risposta!"
                     "Non vale la pena comprare dall'estero se non c\'e\' cambio favorevole!",
                     "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
                     "Non stare a meno di 20 cm di distanza dalle altre persone!",
                     "Da quanto non vai a fare una scarpinata a Monte Pellegrino???",
                     "Copiare da uno solo è reato. Copiare da tanti è ricerca!", "Soltanto un Sith vive di assoluti!",
                     "Non c\'è provare...C\'è fare o non fare!", "Un vulcaniano non sarebbe mai così indeciso!",
-                    "Vivi la vita un quarto di euro alla volta!",
-                    "Scriviti tutti i tuoi conti!", "Lotta sempre contro le multinazionali, tranne Apple!",
-                    "Piega sempre le tue camicie!", ""
-                    "Fai una maratona di Gazebo!", "Sfogati con un cameriere!"]
+                    "Vivi la vita un quarto di euro alla volta!", "Basta mangiare! Sei malato!",
+                    "Scriviti tutti i tuoi conti in un archivio cartaceo!", "Lotta sempre contro le multinazionali, tranne Apple!",
+                    "Piega sempre le tue camicie!", "Non si può pagare con carta? No grazie!",
+                    "Vuoi stupirla? Falle vedere che usi Ubuntu!", "Non sarà mai peggio del finale di Lost!",
+                    "Non sentirti in colpa! Sono affari!", "Non prendere mai decisioni prima di aver sorseggiato un Earl Grey!"
+                    "Fai una maratona di puntate di Gazebo!", "Sfogati con un cameriere!"]
     update.message.reply_text(random.choice(listConsigli))
 
 
@@ -105,7 +107,9 @@ def quokka(bot, update):
                    "http://images2.corriereobjects.it/methode_image/2014/08/31/Scienze/Foto%20Gallery/BJsXlZIh1CJ-png__605.jpg",
                    "https://s-media-cache-ak0.pinimg.com/originals/92/32/5c/92325cda58adb047c3215ef092874fb7.jpg",
                    "https://s-media-cache-ak0.pinimg.com/originals/4d/43/8f/4d438f5ae4f70e4d1a5401f1bd4d2aac.jpg",
-                   "http://lepassionicondivise.altervista.org/wp-content/uploads/2016/10/uaa7Nzn.jpg"]
+                   "http://lepassionicondivise.altervista.org/wp-content/uploads/2016/10/uaa7Nzn.jpg",
+                   "https://s-media-cache-ak0.pinimg.com/736x/bb/7f/2f/bb7f2f4e470b07676817896aece18851.jpg",
+                   ]
     listquotes = ["Ho appena defecato!", "Compro e vendo oro!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
                   "Apri la borsa, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
                   "Facciamo pesce e pesce!", "Non sono mai sazio!", "Sono il marsupiale più felice del mondo secondo i tuoi criteri!",
