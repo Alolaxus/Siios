@@ -41,7 +41,7 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
-    dp.add_handler(MessageHandler("suca", unknownMessage()))
+    dp.add_handler(MessageHandler("suca", unknownMessage))
     dp.add_error_handler(error)
     updater.start_polling()
     updater.idle()
