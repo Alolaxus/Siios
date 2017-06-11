@@ -35,7 +35,7 @@ def unknownMessage(bot, update):
 def consiglio(bot, update):
     listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Parla solo con chi ha almeno un dottorato!",
                     "Mai andare a bobbonella dopo le 23!", "Interpreta un brano di De Gregori!",
-                    "Il tg di Mentana è l'unico che ti dice la verità!", "Solo nella chimica troverai la vera risposta!"
+                    "Il tg di Mentana è l'unico che ti dice la verità!", "Solo nella chimica troverai la vera risposta!",
                     "Non vale la pena comprare dall'estero se non c\'e\' cambio favorevole!",
                     "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
                     "Non stare a meno di 20 cm di distanza dalle altre persone!", "Trovati sempre qualcosa da fare, come Veltroni!",
