@@ -22,8 +22,7 @@ def start(bot, update):
     update.message.reply_text('Hi!')
 
 
-def help(bot, update):
-    update.message.reply_text('Help!')
+
 
 
 def consiglio(bot, update):
