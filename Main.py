@@ -61,10 +61,11 @@ def cambio(bot, update):
 
 
 def cifra(bot, update):
+
     user = update.message.from_user
-    reply_keyboard = [['Penso di si', 'Penso di no']]
+    replyother_keyboard = [['Penso di si', 'Penso di no']]
     update.message.reply_text("Hmm, capisco! Ma dimmi, ci sono in ballo più di 10 euro?",
-                              reply_markup=ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=True))
+                              reply_markup=ReplyKeyboardMarkup(replyother_keyboard, one_time_keyboard=True))
 
     return CIFRA
 
@@ -98,9 +99,9 @@ def main():
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
         states={
-            CIFRA: [RegexHandler('^(Abbastanza|Poco|Fondamentale)$', cifra)],
+            RISPOSTA: [RegexHandler('^(Abbastanza|Poco|Fondamentale)$', cifra)],
 
-            FINE: [MessageHandler(Filters.text, fine)]
+            CIFRA: [MessageHandler(Filters.text, fine)]
         },
 
         fallbacks=[CommandHandler("cancel", cancel)]
@@ -109,7 +110,7 @@ def main():
     dp.add_error_handler(error)
 
     updater.start_polling()
-    
+
     updater.idle()
 
 
