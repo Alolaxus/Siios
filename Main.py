@@ -22,10 +22,7 @@ def start(bot, update):
     update.message.reply_text('Hi!')
 
 
-
-
 def consiglio(bot, update):
-
     update.message.reply_text(random.choice(listConsigli))
 
 
@@ -42,10 +39,10 @@ def main():
     updater.start_polling()
     updater.idle()
 
+
 if __name__ == '__main__':
     main()
 
-
 listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Prendi un dottorato!",
-                    "Non so aiutarti! Qui diventa cazzo!",
-                    "Paga le tue multe!"]
+                "Non so aiutarti! Qui diventa cazzo!",
+                "Paga le tue multe!"]
