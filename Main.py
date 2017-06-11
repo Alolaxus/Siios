@@ -116,7 +116,7 @@ def quokka(bot, update):
     ]
     listquotes = ["Ho appena defecato!", "Ti piaccio perchè sorrido e ora sono a rischio di estinzione!",
                   "Apri la borsa e nutrimi, presto!", "Non mangio da 3 minuti!", "Ho il pelo morbido e pieno di malattie!",
-                  "Facciamo pesce e pesce!", "Non sono mai sazio!",
+                  "Sono davvero felice di vederti!", "Non sono mai sazio!",
                   "Sono il marsupiale più felice del mondo secondo i tuoi criteri!",
                   "Non posseggo alcuna ablilità per difendermi dai predatori!", "Ormai dipendo unicamente da te!",
                   "Sei il primo che si fa un selfie con me!"]
