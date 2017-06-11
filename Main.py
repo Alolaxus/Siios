@@ -89,9 +89,25 @@ def error(bot, update, error):
 
 
 def sendisland(bot, update):
+    listIslands = ["http://www.guoguiyan.com/data/out/105/68947604-island-wallpapers.jpg",
+                   "http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg",
+                   "http://www.fregate.com/assets/stageImages/fregate-island-beaches1.jpg",
+                   ]
     chat_id = update.message.chat_id
-    bot.send_photo(chat_id=chat_id, photo='http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg')
-    
+    bot.send_photo(chat_id=chat_id, photo=random.choice(listIslands))
+
+def quokka(bot, update):
+    listquokkas = ["http://www.lastampa.it/rf/image_lowres/Pub/p4/2017/02/28/LaZampa/Foto/RitagliWeb/quokka01-10263-U11001522025659KVH-U11001522025659egE-1400x788%40LaStampa.it.JPG",
+                   "http://images2.corriereobjects.it/methode_image/2014/08/31/Scienze/Foto%20Gallery/BJsXlZIh1CJ-png__605.jpg",
+                   "https://s-media-cache-ak0.pinimg.com/originals/92/32/5c/92325cda58adb047c3215ef092874fb7.jpg",
+                   "https://s-media-cache-ak0.pinimg.com/originals/4d/43/8f/4d438f5ae4f70e4d1a5401f1bd4d2aac.jpg",
+                   "http://lepassionicondivise.altervista.org/wp-content/uploads/2016/10/uaa7Nzn.jpg"]
+    listquotes = ["Ho appena defecato!", "Compro e vendo oro!", "Nutrimi!","Apri la borsa, presto!"]
+
+    chat_id = update.message.chat_id
+    bot.send_message(chat_id=chat_id, text=random.choice(listquotes))
+    bot.send_photo(chat_id=chat_id,photo=random.choice(listquokkas))
+
 
 
 def main():
@@ -114,6 +130,7 @@ def main():
     )
     dp.add_handler(conv_handler)
     dp.add_handler((CommandHandler("isola", sendisland)))
+    dp.add_handler((CommandHandler("quokkas", quokka)))
     dp.add_error_handler(error)
 
     updater.start_polling()
