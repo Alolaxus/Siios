@@ -88,10 +88,9 @@ def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 
-def sendIsland(bot, update):
-    chat_id = bot.get_updates()[-1].message.chat_id
-    bot.send_photo(chat_id=chat_id,
-                   photo="http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg")
+def sendisland(bot, update):
+   
+    bot.send_photo(photo="http://www.vladi-private-islands.de/fileadmin/_processed_/1/7/csm_cousine_island_057_1339e09652.jpg")
 
 
 def main():
@@ -113,7 +112,7 @@ def main():
         fallbacks=[CommandHandler("cancel", cancel)]
     )
     dp.add_handler(conv_handler)
-    dp.add_handler((CommandHandler("isola", sendIsland)))
+    dp.add_handler((CommandHandler("isola", sendisland)))
     dp.add_error_handler(error)
 
     updater.start_polling()
