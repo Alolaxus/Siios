@@ -49,7 +49,7 @@ def consiglio(bot, update):
                     "Piega perfettamente le camicie e mettile sempre nel cellophane!", "Non si può pagare con carta? No grazie!",
                     "Vuoi stupirla? Falle vedere che usi Ubuntu!", "Non ti finirà mai peggio del finale di Lost!",
                     "Non sentirti in colpa! Sono affari!",
-                    "Non prendere mai decisioni prima di aver sorseggiato un Earl Grey!"
+                    "Non prendere mai decisioni prima di aver sorseggiato un Earl Grey!",
                     "Fai una maratona di puntate di Gazebo!", "Sfogati con un cameriere!"]
     update.message.reply_text(random.choice(listConsigli))
 
