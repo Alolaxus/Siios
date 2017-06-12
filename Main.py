@@ -125,6 +125,26 @@ def quokka(bot, update):
     bot.send_message(chat_id=chat_id, text=random.choice(listquotes))
     bot.send_photo(chat_id=chat_id, photo=random.choice(listquokkas))
 
+def anziani(bot, update):
+
+        listaforismi = ["Ai nostri tempi quando che si stava meglio", "Ah i giovani d\'oggi", "Una volta qui era tutta campagna",
+                        "Il giovane va più veloce dell\'anziano, ma l\'anziano conosce la strada", "Bello sto nuovo cantiere",
+                        "Gioventù bruciata", "Non sento, parla più forte!", "Non c\'erano tutti sti stranieri ai tempi miei",
+                        "Sti giovani, tutti dei maleducati!","Ai miei tempi a scuola andavo a piedi, con un metro e mezzo di neve, e camminavo per venti chilometri",
+                        "Aspettiamo.","Sei giovane, non puoi capire.","Ai miei tempi se una cosa si rompeva si aggiustava.",
+                        "Cosa mi guardi, drogato? Ah che io lo so... delinquente..."]
+
+        listafotoanziani = ["http://www.grottaglieinrete.it/it/wp-content/uploads/2014/04/sociale-vecchi-anziani.jpeg",
+                            "http://www.varesenews.it/photogallery_new/images/2010/07/afa-vecchi-254927.610x431.jpg",
+                            "https://isaac.guidasicilia.it/foto/news/attualita/pugno_di_vecchi_amici_N.jpg",
+                            "http://italia-notizie.it/wp-content/uploads/2015/06/spa02.jpg", "http://la-zanzara.radio24.ilsole24ore.com/wp-content/uploads/sites/101/2016/11/napolitano.jpg",
+                            "http://www.si24.it/wp-content/uploads/2016/04/Anziani-600x300.jpg", "https://www.alzheimer-riese.it/images/stories/automatic/2956/5b5a11b425f6292f51216e89c0b031d1.jpg",
+                            "http://www.ruvesi.it/wp-content/uploads/2017/05/anziani-cuore.jpg"]
+
+        chat_id = update.message.chat_id
+        bot.send_message(chat_id=chat_id, text=random.choice(listaforismi))
+        bot.send_photo(chat_id=chat_id, photo=random.choice(listafotoanziani))
+
 
 def gatti(bot, update):
 
@@ -186,6 +206,7 @@ def main():
     dp.add_handler((CommandHandler("isola", sendisland)))
     dp.add_handler((CommandHandler("quokkas", quokka)))
     dp.add_handler((CommandHandler("schlingel", gatti)))
+    dp.add_handler((CommandHandler("hotelcantiere",anziani)))
     dp.add_error_handler(error)
 
     updater.start_polling()
