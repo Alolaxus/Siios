@@ -3,6 +3,7 @@
 import requests
 import json
 import time
+from pa import PROVA
 import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
@@ -14,7 +15,7 @@ from uuid import uuid4
 import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
-
+D = PROVA
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
 
@@ -22,6 +23,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
                     level=logging.INFO)
 
 logger = logging.getLogger(__name__)
+
+def prova(bot, update):
+    update.message.reply_text(D)
 
 
 def start(bot, update):
@@ -190,7 +194,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
     '''dp.add_handler(MessageHandler(Filters.text, unknownMessage))'''
-
+    dp.add_handler(MessageHandler("ciao",prova))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
