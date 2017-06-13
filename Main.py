@@ -3,7 +3,7 @@
 import requests
 import json
 import time
-from pa import PROVA
+import blue
 import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
@@ -15,7 +15,7 @@ from uuid import uuid4
 import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
-D = PROVA
+D = blue.PROVA
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
 
