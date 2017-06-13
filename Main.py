@@ -25,7 +25,8 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def prova(bot, update):
-    update.message.reply_text(D)
+    listProva = blue.LISTPROVA
+    update.message.reply_text(random.choice(listProva))
 
 
 def start(bot, update):
