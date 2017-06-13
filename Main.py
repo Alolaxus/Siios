@@ -4,7 +4,7 @@ import requests
 import json
 import time
 import blue
-import secr
+
 import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
@@ -16,7 +16,6 @@ from uuid import uuid4
 import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
-D = blue.PROVA
 
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
@@ -27,9 +26,9 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 def prova(bot, update):
-    listProva = blue.LISTPROVA
-    VULC = secr.PROVETTA
-    update.message.reply_text(VULC)
+    listNonsense = blue.LISTPROVA
+
+    update.message.reply_text(listNonsense)
 
 
 def start(bot, update):
@@ -41,25 +40,10 @@ def unknownMessage(bot, update):
 
 
 def consiglio(bot, update):
-    listConsigli = ["Apri un Blog!", "Convinci qualcuno a finanziarti!", "Parla solo con chi ha almeno un dottorato!",
-                    "Mai andare a bobbonella dopo le 23!", "Impara un album di De Gregori e sarai al centro di ogni festa!",
-                    "Il tg di Mentana è l'unico che ti dirà la verità!", "Non è spocchia ma amore per la conoscenza!",
-                    "Solo nella chimica troverai la vera risposta!", "Genova non è una città ma uno stile di vita!",
-                    "Meno features = meno problemi!", "Prima di tutto chiediti: posso farlo col Mac?",
-                    "Non stare a meno di 20 cm di distanza dalle altre persone!", "La tua parola deve sempre prevalere in una discussione!",
-                    "Trovati sempre qualcosa di diverso da fare, come Veltroni!",
-                    "Da quanto non vai a fare una scarpinata a Monte Pellegrino???",
-                    "Copiare da uno solo è reato. Copiare da tanti è ricerca!", "Soltanto un Sith vive di assoluti!",
-                    "Non c\'è provare...C\'è fare o non fare!", "Un vulcaniano non sarebbe mai così indeciso!",
-                    "Vivi la vita un quarto di euro alla volta!", "Basta mangiare! Sei malato!",
-                    "Scriviti tutti i tuoi conti in un archivio cartaceo!",
-                    "Lotta sempre contro le multinazionali, tranne Apple!",
-                    "Piega perfettamente le camicie e mettile sempre nel cellophane!", "Non si può pagare con carta? No grazie!",
-                    "Vuoi stupirla? Falle vedere che usi Ubuntu!", "Non ti finirà mai peggio del finale di Lost!",
-                    "Non sentirti in colpa! Sono affari!",
-                    "Non prendere mai decisioni prima di aver sorseggiato un Earl Grey!",
-                    "Fai una maratona di puntate di Gazebo!", "Sfogati con un cameriere!"]
-    update.message.reply_text(random.choice(listConsigli))
+
+    consigliList = blue.listConsigli
+
+    update.message.reply_text(random.choice(consigliList))
 
 
 def cambio(bot, update):
