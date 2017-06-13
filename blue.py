@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 PROVA = 'EHI!'
 
 LISTPROVA = ["ORA BASTA!", "SMETTILA!", "VILLANO!", "NON CAPISCI NIENTE!"]
