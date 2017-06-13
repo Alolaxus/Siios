@@ -4,6 +4,7 @@ import requests
 import json
 import time
 import blue
+import secr
 import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
@@ -16,6 +17,7 @@ import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
 D = blue.PROVA
+
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
 
@@ -26,7 +28,8 @@ logger = logging.getLogger(__name__)
 
 def prova(bot, update):
     listProva = blue.LISTPROVA
-    update.message.reply_text(random.choice(listProva))
+    VULC = secr.PROVETTA
+    update.message.reply_text(VULC)
 
 
 def start(bot, update):
