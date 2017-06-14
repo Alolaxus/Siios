@@ -30,7 +30,7 @@ logger = logging.getLogger(__name__)
 def prova(bot, update):
     listNonsense = blue.LISTPROVA
 
-    update.message.reply_text(listNonsense)
+    update.message.reply_text(random.choice(listNonsense))
 
 
 def start(bot, update):
