@@ -120,7 +120,7 @@ listInlineBotFrasiTrasform = ["avete finito?!", "M\'ANFATTI!", "NON HAI LE CONOS
                  "VADO A BOBBO\'!", "Non è difficile, è inutile.", "...E STO PARLANDO A NOME DI TUTTI!", "MONONEURONE!",
                               "SCHLINGEL!", "Ovviamente non capite", "SEI SOLO UN UOMO!", "Ieri ho visto una puntata di Cosmo con Neil DeGrass Tyson e...",
                               "TI RENDI CONTO DELLA FRUSTRAZIONE QUANDO PROVO A COMUNICARE QUALCOSA?", "fondamentalmente l\'essere umano è un demente",
-                              "Sto lavorando", "ALLORA E\' DECISO!", "non l'\ho capita.", "(Da mi ha infilato due dita in culo)",
+                              "Sto lavorando", "ALLORA E\' DECISO!", "non l\'ho capita.", "(Da mi ha infilato due dita in culo)",
                               "Niente avete aspettato che quel rompicoglioni di Sios andasse a fanculo per soddisfare ogni desiderio malato",
                               "STAI SFIDANDO IL CANE DA GUARDIA!", "mischino", "Andate a fanculo, io me ne vado a squash",
                               "è una cosa tutta italiana intanto", "Mpfh!", "continuate a torturarmi", "VI MERITATE GAME OF THRONES!"]
