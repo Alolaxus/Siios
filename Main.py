@@ -10,7 +10,6 @@ import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
     RegexHandler, BaseFilter
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
-import boto3
 import os
 from os import environ
 from boto.s3.connection import S3Connection
