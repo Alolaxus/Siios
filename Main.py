@@ -117,17 +117,26 @@ def gatti(bot, update):
 
 def inlinequery(bot, update):
     query = update.inline_query.query
-
+    listInlineBotFrasiTrasform = blue.listInlineBotFrasiTrasform
     if not query:
         return
     results = list()
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
-            title='SCRIVI IN CAPSLOCK PER DOMINARE!',
+            title='SCRIVI IN CAPSLOCK E PREDOMINA!',
             input_message_content=InputTextMessageContent(query.upper())
         )
     )
+    results.append(
+        InlineQueryResultArticle(
+            id=uuid4(),
+            title = 'Dillo con parole mie!',
+            input_message_content=InputTextMessageContent(random.choice(listInlineBotFrasiTrasform))
+        )
+    )
+
+
     update.inline_query.answer(results)
 
 def main():

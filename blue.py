@@ -112,3 +112,9 @@ listfotogatti = ["http://i0.kym-cdn.com/photos/images/original/000/191/654/Longc
 '''----------------ISLAND-------------'''
 
 photoIsland = "https://www.oen.org/wp-content/uploads/2015/05/Desert-Island_opt-1.jpg"
+
+
+'''------------INLINEQUERY FRASI BOT---------'''
+
+listInlineBotFrasiTrasform = ["NON MI CONTRADDIRE!", "QUESTA DISCUSSIONE TERMINA QUI!", "NON HAI LE CONOSCENZE ADATTE!",
+                 ""]
