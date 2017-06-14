@@ -8,7 +8,8 @@ import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
     RegexHandler, BaseFilter
-from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
+from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResultArticle, ParseMode,
+                      InputTextMessageContent)
 import os
 from os import environ
 from boto.s3.connection import S3Connection
@@ -27,7 +28,6 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 
-
 def start(bot, update):
     update.message.reply_text('Lunga vita e prosperità!')
 
@@ -37,7 +37,6 @@ def unknownMessage(bot, update):
 
 
 def consiglio(bot, update):
-
     consigliList = blue.listConsigli
 
     update.message.reply_text(random.choice(consigliList))
@@ -83,14 +82,12 @@ def error(bot, update, error):
 
 
 def sendisland(bot, update):
-
     photoIsland = blue.photoIsland
     chat_id = update.message.chat_id
     bot.send_photo(chat_id=chat_id, photo=photoIsland)
 
 
 def quokka(bot, update):
-
     listquokkas = blue.listquokkas
 
     listquotes = blue.listquotes
@@ -99,15 +96,15 @@ def quokka(bot, update):
     bot.send_message(chat_id=chat_id, text=random.choice(listquotes))
     bot.send_photo(chat_id=chat_id, photo=random.choice(listquokkas))
 
+
 def anziani(bot, update):
-        listaforismi = blue.listaforismi
+    listaforismi = blue.listaforismi
 
-        listafotoanziani = blue.listafotoanziani
+    listafotoanziani = blue.listafotoanziani
 
-
-        chat_id = update.message.chat_id
-        bot.send_message(chat_id=chat_id, text=random.choice(listaforismi))
-        bot.send_photo(chat_id=chat_id, photo=random.choice(listafotoanziani))
+    chat_id = update.message.chat_id
+    bot.send_message(chat_id=chat_id, text=random.choice(listaforismi))
+    bot.send_photo(chat_id=chat_id, photo=random.choice(listafotoanziani))
 
 
 def gatti(bot, update):
@@ -118,6 +115,20 @@ def gatti(bot, update):
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
     bot.send_photo(chat_id=chat_id, photo=random.choice(listfotogatti))
 
+def inlinequery(bot, update):
+    query = update.inline_query.query
+
+    if not query:
+        return
+    results = list()
+    results.append(
+        InlineQueryResultArticle(
+            id=uuid4(),
+            title='Caps',
+            input_message_content=InputTextMessageContent(query.upper())
+        )
+    )
+    update.inline_query.answer(results)
 
 def main():
     updater = Updater(TOKEN)
@@ -125,7 +136,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
     '''dp.add_handler(MessageHandler(Filters.text, unknownMessage))'''
-
+    dp.add_handler(InlineQueryHandler(inlinequery))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
@@ -141,7 +152,7 @@ def main():
     dp.add_handler((CommandHandler("isola", sendisland)))
     dp.add_handler((CommandHandler("quokkas", quokka)))
     dp.add_handler((CommandHandler("schlingel", gatti)))
-    dp.add_handler((CommandHandler("hotelcantiere",anziani)))
+    dp.add_handler((CommandHandler("hotelcantiere", anziani)))
     dp.add_error_handler(error)
 
     updater.start_polling()
