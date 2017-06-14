@@ -4,7 +4,6 @@ import requests
 import json
 import time
 import blue
-
 import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
