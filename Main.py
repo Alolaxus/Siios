@@ -124,7 +124,7 @@ def inlinequery(bot, update):
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
-            title='Caps',
+            title='SCRIVI IN CAPSLOCK PER DOMINARE!',
             input_message_content=InputTextMessageContent(query.upper())
         )
     )
