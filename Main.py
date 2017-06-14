@@ -20,7 +20,7 @@ import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
 
-s3 = S3Connection(os.environ['TOKEN'])
+s3 = os.environ.get('TOKEN')
 
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
