@@ -10,12 +10,18 @@ import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
     RegexHandler, BaseFilter
 from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove)
+import boto3
+import os
+from os import environ
+from boto.s3.connection import S3Connection
 import logging
 import re
 from uuid import uuid4
 import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
+
+s3 = S3Connection(os.environ['TOKEN'])
 
 URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
 bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
@@ -28,7 +34,7 @@ logger = logging.getLogger(__name__)
 def prova(bot, update):
     listNonsense = blue.LISTPROVA
 
-    update.message.reply_text(listNonsense)
+    update.message.reply_text(s3)
 
 
 def start(bot, update):
