@@ -118,8 +118,7 @@ def gatti(bot, update):
 def inlinequery(bot, update):
     query = update.inline_query.query
     listInlineBotFrasiTrasform = blue.listInlineBotFrasiTrasform
-    if not query:
-        return
+    
     results = list()
     results.append(
         InlineQueryResultArticle(
