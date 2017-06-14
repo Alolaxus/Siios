@@ -129,7 +129,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
     '''dp.add_handler(MessageHandler(Filters.text, unknownMessage))'''
-    '''dp.add_handler(MessageHandler(Filters.text,prova))'''
+    dp.add_handler(MessageHandler(Filters.text,prova))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
