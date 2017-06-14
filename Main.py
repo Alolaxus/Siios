@@ -20,10 +20,7 @@ import logging
 
 RISPOSTA, CIFRA, FINE = range(3)
 
-s3 = os.environ.get('TOKEN')
-
-URL = "https://api.telegram.org/bot322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0/"
-bot = telegram.Bot('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
+TOKEN = os.environ.get('TOKEN')
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -33,7 +30,7 @@ logger = logging.getLogger(__name__)
 def prova(bot, update):
     listNonsense = blue.LISTPROVA
 
-    update.message.reply_text(s3)
+    update.message.reply_text(listNonsense)
 
 
 def start(bot, update):
@@ -182,7 +179,7 @@ def gatti(bot, update):
 
 
 def main():
-    updater = Updater('322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0')
+    updater = Updater(TOKEN)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
