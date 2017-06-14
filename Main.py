@@ -26,10 +26,6 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 
 logger = logging.getLogger(__name__)
 
-def prova(bot, update):
-    listNonsense = blue.LISTPROVA
-
-    update.message.reply_text(random.choice(listNonsense))
 
 
 def start(bot, update):
@@ -129,7 +125,7 @@ def main():
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
     '''dp.add_handler(MessageHandler(Filters.text, unknownMessage))'''
-    dp.add_handler(MessageHandler(Filters.text,prova))
+
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("cambiomoneta", cambio)],
 
