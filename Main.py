@@ -118,7 +118,9 @@ def gatti(bot, update):
 def inlinequery(bot, update):
     query = update.inline_query.query
     listInlineBotFrasiTrasform = blue.listInlineBotFrasiTrasform
-    
+
+    if not query:
+        return
     results = list()
     results.append(
         InlineQueryResultArticle(
@@ -137,6 +139,20 @@ def inlinequery(bot, update):
 
 
     update.inline_query.answer(results)
+
+def frasiFatte(bot, update):
+    listCreaeFraseUno = blue.listCreateFraseUno
+    listCreaeFraseDue = blue.listCreateFraseDue
+    listCreaeFraseTre = blue.listCreateFraseTre
+    listCreaeFraseQuattro = blue.listCreateFraseQuattro
+    listCreaeFraseCinque = blue.listCreateFraseCinque
+
+    update.message.reply_text(random.choice(random.choice(listCreaeFraseUno)
+                                                +random.choice(listCreaeFraseDue)
+                                                +random.choice(listCreaeFraseTre)
+                                                +random.choice(listCreaeFraseQuattro)
+                                                +random.choice(listCreaeFraseCinque)))
+
 
 def main():
     updater = Updater(TOKEN)
@@ -161,6 +177,7 @@ def main():
     dp.add_handler((CommandHandler("quokkas", quokka)))
     dp.add_handler((CommandHandler("schlingel", gatti)))
     dp.add_handler((CommandHandler("hotelcantiere", anziani)))
+    dp.add_handler((CommandHandler("frasifatte", frasiFatte)))
     dp.add_error_handler(error)
 
     updater.start_polling()
