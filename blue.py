@@ -148,7 +148,7 @@ listCreateFraseQuattro = ["quando devono esportare democrazia", "sui giochi per 
 
 
 listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri paesi", "nei video dell\'app della Rai",
-                         "con Andrea Salerno", "a Ziwataneo", "in Toscana", "con me o con te", "nelle università",
+                         "con Andrea Salerno", "a Ziwataneo", "in Toscana", "a me o a te", "nelle università",
                          "durante un concerto di Springsteen", "anche se non hanno imparato neanche una canzone di De Gregori"]
 
 listCreateFraseSei= [", e sto parlando a nome di tutti.", " ma non non si dovrebbe mai sfidare il cane da guardia.", " ma voi continuate a torturarmi",
