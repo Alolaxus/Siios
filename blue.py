@@ -147,13 +147,13 @@ listCreateFraseQuattro = ["quando devono esportare democrazia", "sui giochi per 
                           "se si deve blastare la gente", "e non si degnano neanche di dirci la verità", "e fanno i loro porci comodi",
                           "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the", "se guardano solo il loro fottuto orticello"
                           "quando ovviamente non hanno niente da fare", "quando pensano solo a ingozzarsi", "se a molti mancano i neuroni", "quando si parla a sproposito",
-                          "se un giorno saremo in grado di andare nello spazio"]
+                          "se un giorno saremo in grado di andare nello spazio", "se vogliamo salvaguardare l\'ecosistema"]
 
 
 listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri paesi", "nei video dell\'app della Rai",
                          "con Andrea Salerno", "a Ziwataneo", "in Toscana", "con me o con te", "nelle università",
                          "durante un concerto di Springsteen", "anche se non hanno imparato neanche una canzone di De Gregori", "al ristorante",
-                         "a Genova", "in laboratorio", "a mare", "in bicicletta"]
+                         "a Genova", "in laboratorio", "a mare", "in bicicletta", ""]
 
 listCreateFraseSei= [", e sto parlando a nome di tutti.", " ma non non si dovrebbe mai sfidare il cane da guardia.", " ma voi continuate a torturarmi",
                      ", e ora continuo a lavorare.", " e penso di sapere quello che dico.", ", scusate il neologismo.",
