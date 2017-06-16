@@ -151,7 +151,7 @@ listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri
                          "con Andrea Salerno", "a Ziwataneo", "in Toscana", "con me o con te", "nelle università",
                          "durante un concerto di Springsteen", "anche se non hanno imparato neanche una canzone di De Gregori"]
 
-listCreateFraseSei= [", e sto parlando a nome di tutti.", " e non si dovrebbe sfidare il cane da guardia.", " ma voi continuate a torturarmi",
+listCreateFraseSei= [", e sto parlando a nome di tutti.", " ma non non si dovrebbe mai sfidare il cane da guardia.", " ma voi continuate a torturarmi",
                      ", e ora continuo a lavorare.", " e penso di sapere quello che dico.", ", scusate il neologismo.",
                      ", hai capito il punto?", ". Niente, solo questo."," e questo mi ha fatto riflettere.", ", ora ripeti con me questo concetto.",
                      ", è una questione di buon senso."]
