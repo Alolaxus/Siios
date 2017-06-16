@@ -147,11 +147,12 @@ def frasiFatte(bot, update):
     listCreaeFraseQuattro = blue.listCreateFraseQuattro
     listCreaeFraseCinque = blue.listCreateFraseCinque
 
-    update.message.reply_text(random.choice(random.choice(listCreaeFraseUno)
+    update.message.reply_text(random.choice(listCreaeFraseUno)
                                                 +random.choice(listCreaeFraseDue)
                                                 +random.choice(listCreaeFraseTre)
                                                 +random.choice(listCreaeFraseQuattro)
-                                                +random.choice(listCreaeFraseCinque)))
+                                                +random.choice(listCreaeFraseCinque))
+
 
 
 def main():
