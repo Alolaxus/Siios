@@ -144,7 +144,7 @@ listCreateFraseTre = ["prendono per il culo ", "vogliono assuefarci ", "ci stann
 
 listCreateFraseQuattro = ["quando devono esportare democrazia ", "sui giochi per il Mac ", "quando si tratta di fare informazione ",
                           "se si deve blastare la gente ", "e non si degnano neanche di dirci la verità", "e fanno i loro porci comodi ",
-                          "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the ", ""]
+                          "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the "]
 
 
 listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri paesi", "nei video dell\'app della Rai",
