@@ -149,10 +149,15 @@ def frasiFatte(bot, update):
     listcreaeFraseSei = blue.listCreateFraseSei
 
     update.message.reply_text(random.choice(listCreaeFraseUno)
+                                                + " "
                                                 +random.choice(listCreaeFraseDue)
+                                                + " "
                                                 +random.choice(listCreaeFraseTre)
+                                                + " "
                                                 +random.choice(listCreaeFraseQuattro)
+                                                + " "
                                                 +random.choice(listCreaeFraseCinque)
+                                                + " "
                                                 +random.choice(listcreaeFraseSei))
 
 
