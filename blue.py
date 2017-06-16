@@ -128,23 +128,23 @@ listInlineBotFrasiTrasform = ["avete finito?!", "M\'ANFATTI!", "NON HAI LE CONOS
 
 '''------------FRASI CONGIUNTE ---------'''
 
-listCreateFraseUno = ["Neil DeGrass Tyson diceva che ", "I vulcaniani pensano che", "State sottovalutando il fatto che "
+listCreateFraseUno = ["Neil DeGrass Tyson diceva che ", "I vulcaniani pensano che", "State sottovalutando il fatto che ",
                       "Allora non hai capito, ", "Per le scienze riduzionistiche ", "Lyezar mi ha detto che", "Niente, ", "Ma allora ",
                       "Steve Jobs diceva spesso che", "Ma sai che su Focus tempo fa c\'era un articolo che diceva ", "Ripeto, per me "]
 
 listCreateFraseDue = ["le multinazionali ", "i Quokka ", "quei monelli dei gatti ", "gli esseri umani ", "alla Lucas Art", ""
                       "alla Disney", "a Gazebo ", "quei cazzoni degli americani ", "quelli del PD ", "i palermitani alla guida ",
-                      "gli autori di South Park", "le storie di Borderlands ", "Trump e i suoi elettori ", "le industrie farmaceutiche "
+                      "gli autori di South Park ", "le storie di Borderlands ", "Trump e i suoi elettori ", "le industrie farmaceutiche "
                       "le banche "]
 
 listCreateFraseTre = ["prendono per il culo ", "vogliono assuefarci ", "ci stanno tracciando ", "si stanno autodistruggendo ",
-                      "sono bravissimi ", "vogliono fotterci ", "non capiscono un cazzo ", "ci mangiano sopra ", "fanno l\'esatto opposto",
+                      "sono bravissimi ", "vogliono fotterci ", "non capiscono un cazzo ", "ci mangiano sopra ", "fanno l\'esatto opposto di quello che dovrebbero fare",
                       "non vogliono che pensiamo ", "dovrebbero imparare  "]
 
 
 listCreateFraseQuattro = ["quando devono esportare democrazia ", "sui giochi per il Mac ", "quando si tratta di fare informazione ",
                           "se si deve blastare la gente ", "e non si degnano neanche di dirci la verità", "e fanno i loro porci comodi ",
-                          "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the "]
+                          "quando parlano di chimica senza sapere un cazzo ", "quando arriva l\'ora del the "]
 
 
 listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri paesi", "nei video dell\'app della Rai",
