@@ -118,10 +118,11 @@ def gatti(bot, update):
 def inlinequery(bot, update):
     query = update.inline_query.query
 
-
     if not query:
         return
+
     results = list()
+    
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
@@ -149,7 +150,6 @@ def inlinequery(bot, update):
             input_message_content=InputTextMessageContent(random.choice(fineZ))
         )
     )
-
 
     update.inline_query.answer(results)
 
