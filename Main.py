@@ -146,7 +146,7 @@ def inlinequery(bot, update):
         InlineQueryResultArticle(
             id=uuid4(),
             title = 'Dillo con parole mie!',
-            input_message_content=InputTextMessageContent(random.choice(blue.listInlineBotFrasiTrasform))
+            input_message_content=InputTextMessageContent(random.choice(fineZ))
         )
     )
 
