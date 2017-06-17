@@ -117,7 +117,7 @@ def gatti(bot, update):
 
 def inlinequery(bot, update):
     query = update.inline_query.query
-    listInlineBotFrasiTrasform = blue.listInlineBotFrasiTrasform
+
 
     if not query:
         return
@@ -130,7 +130,7 @@ def inlinequery(bot, update):
         )
     )
 
-    if "rotto" in query:
+    '''  if "rotto" in query:
 
         risultato = random.choice(blue.listInlineBotLamentela)
 
@@ -139,9 +139,9 @@ def inlinequery(bot, update):
         risultato = random.choice(blue.listInlineBotSaccenza)
 
     else:
-        risultato = random.choice(blue.listInlineBotFrasiTrasform)
+        risultato = random.choice(blue.listInlineBotFrasiTrasform) '''
 
-    fineZ = risultato
+    fineZ = random.choice(blue.listInlineBotFrasiTrasform)
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
