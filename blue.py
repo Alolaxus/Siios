@@ -125,6 +125,12 @@ listInlineBotFrasiTrasform = ["avete finito?!", "M\'ANFATTI!", "NON HAI LE CONOS
                               "STAI SFIDANDO IL CANE DA GUARDIA!", "mischino", "Andate a fanculo, io me ne vado a squash",
                               "è una cosa tutta italiana intanto", "Mpfh!", "continuate a torturarmi", "VI MERITATE GAME OF THRONES!"]
 
+listInlineBotLamentela = ["avete finito?", "STAI SFIDANDO IL CANE DA GUARDIA!", "HAI ROTTO LE PALLE!", "NON HAI LE COMPETENZE PER POTERNE PARLARE!",
+                          "Quello che dici non ha senso.", "TI AMMAZZO", "SEI SOLO UN UOMO!", "ORA BASTA!"]
+
+listInlineBotSaccenza = ["Perchè sei un mononeurone.", "Non si capisce niente.", "Mentana ti avrebbe blastato per quello che hai detto",
+                         "Si vede che non hai un dottorato, o almeno, uno serio."]
+
 
 '''------------FRASI CONGIUNTE ---------'''
 
@@ -139,23 +145,23 @@ listCreateFraseDue = ["le multinazionali", "i Quokka", "quei monelli dei gatti",
 
 listCreateFraseTre = ["prendono per il culo", "vogliono assuefarci", "ci stanno tracciando", "si stanno autodistruggendo",
                       "sono bravissimi", "vogliono fotterci", "non capiscono un cazzo", "ci mangiano sopra", "fanno l\'esatto opposto di quello che dovrebbero fare",
-                      "non vogliono che pensiamo", "dovrebbero imparare", "ci hanno ingannati", "pensano di essere al di sopra di tutti", "sporcano la città",
-                      "vogliono farci ammazzare tra noi"]
+                      "non vogliono che pensiamo", "dovrebbero imparare", "pensano di essere al di sopra di tutti",
+                      "vogliono farci ammazzare tra noi", "utilizzano il loro potere"]
 
 
 listCreateFraseQuattro = ["quando devono esportare democrazia", "sui giochi per il Mac", "quando si tratta di fare informazione",
                           "se si deve blastare la gente", "e non si degnano neanche di dirci la verità", "e fanno i loro porci comodi",
                           "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the", "se guardano solo il loro fottuto orticello"
-                          "quando ovviamente non hanno niente da fare", "quando pensano solo a ingozzarsi", "se a molti mancano i neuroni", "quando si parla a sproposito",
+                          "quando ovviamente non hanno niente da fare", "quando pensano solo a ingozzarsi", "quando si parla a sproposito",
                           "se un giorno saremo in grado di andare nello spazio", "se vogliamo salvaguardare l\'ecosistema"]
 
 
 listCreateFraseCinque = ["su Steam", "da Mentana", "al loro paese", "negli altri paesi", "nei video dell\'app della Rai",
                          "con Andrea Salerno", "a Ziwataneo", "in Toscana", "con me o con te", "nelle università",
                          "durante un concerto di Springsteen", "anche se non hanno imparato neanche una canzone di De Gregori", "al ristorante",
-                         "a Genova", "in laboratorio", "a mare", "in bicicletta", ""]
+                         "a Genova", "in laboratorio", "a mare", "in bicicletta", ]
 
-listCreateFraseSei= [", e sto parlando a nome di tutti.", " ma non non si dovrebbe mai sfidare il cane da guardia.", " ma voi continuate a torturarmi",
+listCreateFraseSei= [", e sto parlando a nome di tutti.", " ma non si dovrebbe mai sfidare il cane da guardia.", " ma voi continuate a torturarmi",
                      ", e ora continuo a lavorare.", " e penso di sapere quello che dico.", ", scusate il neologismo.",
                      ", hai capito il punto?", ". Niente, solo questo."," e questo mi ha fatto riflettere.", ", ora ripeti con me questo concetto.",
                      ", è una questione di buon senso.", ", e qui diventa cazzo.", "ma non lo dico solo io.", ", mi pare."]
