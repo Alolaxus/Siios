@@ -138,7 +138,7 @@ def inlinequery(bot, update):
         risultato = random.choice(blue.listInlineBotSaccenza)
 
     else:
-        risultato = random.choice(blue.listInlineBotSaccenza)
+        risultato = random.choice(blue.listInlineBotFrasiTrasform)
 
     results.append(
         InlineQueryResultArticle(
