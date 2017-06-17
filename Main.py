@@ -133,7 +133,7 @@ def inlinequery(bot, update):
 
         risultato = random.choice(blue.listInlineBotLamentela)
 
-    elif "saccenza" in query:
+    if "saccenza" in query:
 
         risultato = random.choice(blue.listInlineBotSaccenza)
 
