@@ -117,12 +117,12 @@ def gatti(bot, update):
 
 def inlinequery(bot, update):
     query = update.inline_query.query
-
+    fineZ = blue.listInlineBotFrasiTrasform
     if not query:
         return
 
     results = list()
-    
+
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
@@ -142,7 +142,7 @@ def inlinequery(bot, update):
     else:
         risultato = random.choice(blue.listInlineBotFrasiTrasform) '''
 
-    fineZ = blue.listInlineBotFrasiTrasform
+
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
