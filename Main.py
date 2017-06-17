@@ -129,22 +129,24 @@ def inlinequery(bot, update):
             input_message_content=InputTextMessageContent(query.upper())
         )
     )
+
     if "rotto" in query:
 
         risultato = random.choice(blue.listInlineBotLamentela)
 
-    if "saccenza" in query:
+    elif "saccenza" in query:
 
         risultato = random.choice(blue.listInlineBotSaccenza)
 
     else:
         risultato = random.choice(blue.listInlineBotFrasiTrasform)
 
+    fineZ = risultato
     results.append(
         InlineQueryResultArticle(
             id=uuid4(),
             title = 'Dillo con parole mie!',
-            input_message_content=InputTextMessageContent(risultato)
+            input_message_content=InputTextMessageContent(fineZ)
         )
     )
 
