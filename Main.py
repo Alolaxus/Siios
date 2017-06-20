@@ -112,10 +112,11 @@ def gatti(bot, update):
     listfotogatti = blue.listfotogatti
 
 
-    
+
     chat_id =  update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
     bot.send_video(chat_id=chat_id, video="http://thecatapi.com/api/images/get?format=src&type=gif")
+    print(chat_id)
 
     '''random.choice(listfotogatti)'''
 
