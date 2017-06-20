@@ -13,7 +13,9 @@ from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResul
                       InputTextMessageContent)
 import os
 from os import environ
-import urllib.request, urllib.parse
+
+import urllib
+from urllib import request
 import logging
 import re
 from uuid import uuid4
@@ -114,7 +116,7 @@ def gatti(bot, update):
 
 
     urlz = "http://thecatapi.com/api/images/get?format=src&type=gif"
-    f = urllib.request.urlopen(urlz)
+
 
     chat_id =  update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
