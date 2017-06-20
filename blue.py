@@ -151,7 +151,7 @@ listCreateFraseTre = ["prendono per il culo", "vogliono assuefarci", "ci stanno 
 
 listCreateFraseQuattro = ["quando devono esportare democrazia", "sui giochi per il Mac", "quando si tratta di fare informazione",
                           "se si deve blastare la gente", "e non si degnano neanche di dirci la verità", "e fanno i loro porci comodi",
-                          "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the", "se guardano solo il loro fottuto orticello"
+                          "quando parlano di chimica senza sapere un cazzo", "quando arriva l\'ora del the", "se guardano solo il loro fottuto orticello",
                           "quando ovviamente non hanno niente da fare", "quando pensano solo a ingozzarsi", "quando si parla a sproposito",
                           "se un giorno saremo in grado di andare nello spazio", "se vogliamo salvaguardare l\'ecosistema"]
 
