@@ -111,9 +111,13 @@ def gatti(bot, update):
     listgatti = blue.listgatti
     listfotogatti = blue.listfotogatti
 
+    link = "http://thecatapi.com/api/images/get?format=src&type=gif"
+
+    f = requests.get(link)
+
     chat_id = update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
-    bot.send_video(chat_id=chat_id, video=random.choice("http://thecatapi.com/api/images/get?format=src&type=gif"))
+    bot.send_video(chat_id=chat_id, video=f)
     '''random.choice(listfotogatti)'''
 
 def inlinequery(bot, update):
