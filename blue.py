@@ -140,8 +140,8 @@ listCreateFraseUno = ["Neil DeGrass Tyson diceva che", "I vulcaniani pensano che
 
 listCreateFraseDue = ["le multinazionali", "i Quokka", "quei monelli dei gatti", "gli esseri umani", "alla Lucas Art",
                       "alla Disney", "a Gazebo", "quei cazzoni degli americani", "quelli del PD", "i palermitani alla guida",
-                      "gli autori di South Park", "nelle storie di Borderlands", "Trump e i suoi elettori", "le industrie farmaceutiche"
-                      ,"le banche"]
+                      "gli autori di South Park", "nelle storie di Borderlands", "Trump e i suoi elettori", "quegli stronzi delle industrie farmaceutiche"
+                      ,"i boss delle banche"]
 
 listCreateFraseTre = ["prendono per il culo", "vogliono assuefarci", "ci stanno tracciando", "si stanno autodistruggendo",
                       "sono bravissimi", "vogliono fotterci", "non capiscono un cazzo", "ci mangiano sopra", "fanno l\'esatto opposto di quello che dovrebbero fare",
