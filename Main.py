@@ -12,7 +12,7 @@ from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResul
                       InputTextMessageContent)
 import os
 from os import environ
-from boto.s3.connection import S3Connection
+
 import logging
 import re
 from uuid import uuid4
@@ -113,7 +113,8 @@ def gatti(bot, update):
 
     chat_id = update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
-    bot.send_photo(chat_id=chat_id, photo=random.choice(listfotogatti))
+    bot.send_photo(chat_id=chat_id, photo="http://thecatapi.com/api/images/get?format=src&type=gif")
+    '''random.choice(listfotogatti)'''
 
 def inlinequery(bot, update):
     query = update.inline_query.query
@@ -153,6 +154,7 @@ def inlinequery(bot, update):
 
     update.inline_query.answer(results)
 
+
 def frasiFatte(bot, update):
     listCreaeFraseUno = blue.listCreateFraseUno
     listCreaeFraseDue = blue.listCreateFraseDue
@@ -176,7 +178,7 @@ def frasiFatte(bot, update):
 
 
 def main():
-    updater = Updater(TOKEN)
+    updater = Updater("322854984:AAG34-oiQAUW2tpu3JDtkSaUnHPzf8xhqO0")
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("consiglio", consiglio))
