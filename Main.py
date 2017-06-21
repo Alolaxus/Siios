@@ -15,6 +15,7 @@ import os
 from os import environ
 
 import urllib
+import urllib.request
 
 
 import logging
@@ -117,7 +118,10 @@ def gatti(bot, update):
 
 
     urlz = "http://thecatapi.com/api/images/get?format=src&type=gif"
-
+    xml = urllib.request.urlopen(urlz)
+    data = xml.read()
+    xml.close()
+    print (data.encode('utf-8'))
 
     chat_id =  update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
