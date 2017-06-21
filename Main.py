@@ -119,7 +119,7 @@ def gatti(bot, update):
 
 
     urlz = requests.get("http://thecatapi.com/api/images/get?format=src&type=gif")
-    print(urlz.url)
+    
     ''' xml = urllib.request.urlopen(urlz)
     data = xml.read()
     xml.close() '''
