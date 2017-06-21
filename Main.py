@@ -17,7 +17,6 @@ from os import environ
 import urllib
 from urllib import request
 
-
 import logging
 import re
 from uuid import uuid4
