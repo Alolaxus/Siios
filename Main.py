@@ -14,7 +14,7 @@ from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResul
 import os
 from os import environ
 
-
+import urllib.request
 import logging
 import re
 from uuid import uuid4
