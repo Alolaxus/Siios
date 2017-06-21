@@ -16,6 +16,7 @@ from os import environ
 
 import urllib
 from urllib import request
+from urllib import parse
 
 import logging
 import re
@@ -120,7 +121,7 @@ def gatti(bot, update):
     xml = urllib.request.urlopen(urlz)
     data = xml.read()
     xml.close()
-    print (data.encode('utf-8'))
+    print (urllib.parse.quote_plus(data))
 
     chat_id =  update.message.chat_id
     bot.send_message(chat_id=chat_id, text=random.choice(listgatti))
