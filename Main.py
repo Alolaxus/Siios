@@ -15,7 +15,7 @@ import os
 from os import environ
 
 import urllib
-import urllib.request
+from urllib import request
 
 
 import logging
