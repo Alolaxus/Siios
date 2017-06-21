@@ -27,6 +27,7 @@ import logging
 RISPOSTA, CIFRA, FINE = range(3)
 
 TOKEN = os.environ.get('TOKEN')
+CAT_API_TOKEN = os.environ.get('CAT_API_TOKEN')
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -118,8 +119,8 @@ def gatti(bot, update):
     listfotogatti = blue.listfotogatti
 
 
-    urlz = requests.get("http://thecatapi.com/api/images/get?format=src&type=gif")
-    
+    urlz = requests.get("http://thecatapi.com/api/images/get?"+CAT_API_TOKEN+"&format=src&type=gif")
+
     ''' xml = urllib.request.urlopen(urlz)
     data = xml.read()
     xml.close() '''
