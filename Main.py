@@ -208,9 +208,16 @@ def frasiFatte(bot, update):
                                                 +random.choice(listcreaeFraseSei))
 
 
+def parloio(bot, update):
+    text = update.message.text
 
+    tmp_f = open('tmp.ogg', 'wb+')
+    tmp_f.write(watsontts.synthesize(text).content)
 
+    bot.sendAudio(update.message.chat_id, audio=open('tmp.ogg', 'rb'))
 
+    tmp_f.close()
+    os.remove('tmp.ogg')
 
 
 def main():
@@ -237,6 +244,7 @@ def main():
     dp.add_handler((CommandHandler("schlingel", gatti)))
     dp.add_handler((CommandHandler("hotelcantiere", anziani)))
     dp.add_handler((CommandHandler("frasifatte", frasiFatte)))
+    dp.add_handler((CommandHandler("avoce", parloio)))
     dp.add_error_handler(error)
 
     updater.start_polling()
