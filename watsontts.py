@@ -32,7 +32,7 @@ def synthesize(text):
 
     # Request foo!
     r = requests.get('https://text-to-speech-demo.mybluemix.net/api/synthesize?' + urlencode(parameters))
-
+    print(r)
     return r
 
 
