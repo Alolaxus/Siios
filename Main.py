@@ -169,11 +169,12 @@ def inlinequery(bot, update):
             input_message_content=InputTextMessageContent(random.choice(fineZ))
         )
     )
+    '''
     tmp_f = open('tmp.ogg', 'wb+')
     tmp_f.write(watsontts.synthesize(query).content)
     results.append(
         InlineQueryResultVoice(
-
+        
             id=uuid4(),
             title = 'Adesso parlo io!',
             voice_url= open('tmp.ogg', 'rb')
@@ -182,7 +183,7 @@ def inlinequery(bot, update):
     )
     tmp_f.close()
     os.remove('tmp.ogg')
-
+    '''
     update.inline_query.answer(results)
 
 
