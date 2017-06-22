@@ -9,13 +9,13 @@ import random
 import telegram
 from telegram.ext import Updater, InlineQueryHandler, CommandHandler, MessageHandler, Filters, ConversationHandler, \
     RegexHandler, BaseFilter
-from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResultArticle, ParseMode,
+from telegram import (ReplyKeyboardMarkup, ReplyKeyboardRemove, InlineQueryResultArticle, InlineQueryResultVoice, ParseMode,
                       InputTextMessageContent)
 import os
 from os import environ
 
 import urllib
-
+import watsontts
 from urllib import request
 from urllib import parse
 
@@ -169,6 +169,19 @@ def inlinequery(bot, update):
             input_message_content=InputTextMessageContent(random.choice(fineZ))
         )
     )
+    tmp_f = open('tmp.ogg', 'wb+')
+    tmp_f.write(watsontts.synthesize(query).content)
+    results.append(
+        InlineQueryResultVoice(
+
+            id=uuid(),
+            title = 'Adesso parlo io!',
+            audio_url= open('tmp.ogg', 'rb')
+
+        )
+    )
+    tmp_f.close()
+    os.remove('tmp.ogg')
 
     update.inline_query.answer(results)
 
@@ -192,6 +205,10 @@ def frasiFatte(bot, update):
                                                 +random.choice(listCreaeFraseCinque)
                                                 + " "
                                                 +random.choice(listcreaeFraseSei))
+
+
+
+
 
 
 
