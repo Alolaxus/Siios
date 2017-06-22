@@ -176,7 +176,7 @@ def inlinequery(bot, update):
 
             id=uuid4(),
             title = 'Adesso parlo io!',
-            audio_url= open('tmp.ogg', 'rb')
+            voice_url= open('tmp.ogg', 'rb')
 
         )
     )
